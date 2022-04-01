@@ -1,5 +1,9 @@
 # README
 
+## Nore version
+
+17.0.0
+
 ## Directory
 
 특별한 경우를 제외하면 Nuxt3에서 제공하는 Directory 외 Custom Directory 는 생성/사용하지 않는다.

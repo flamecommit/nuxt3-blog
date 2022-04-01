@@ -1,0 +1,159 @@
+// ::-moz-selection {background: #000000; color: #ffffff}
+// ::selection {background: #000000; color: #ffffff}
+
+@mixin reset {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  vertical-align: top;
+  outline: none;
+  text-underline-position: under;
+}
+
+* {
+  @include reset();
+
+  &:before,
+  &:after {
+    @include reset();
+  }
+}
+
+html {
+  overflow-y: scroll;
+}
+body {
+  font-family: 'Noto Sans KR', '맑은 고딕', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+ol, 
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+
+  &::before,
+  &::after {
+    content: none;
+  }
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+input {
+  &[type=file],
+  &[type=image],
+  &[type=reset],
+  &[type=button],
+  &[type=submit] {
+    border: none;
+    border-radius: 0;
+    background: none;
+    cursor: pointer;
+    appearance: none;
+    box-shadow: none;
+  }
+
+  &:not([type]),
+  &[type=date],
+  &[type=datetime-local],
+  &[type=email],
+  &[type=month],
+  &[type=number],
+  &[type=password],
+  &[type=search],
+  &[type=tel],
+  &[type=text],
+  &[type=time],
+  &[type=url],
+  &[type=week] {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #ffffff;
+    box-shadow: none;
+
+    &:disabled {
+      background: #f7f7f7;
+    }
+    &::placeholder {
+      color: #999999;
+    }
+  }
+}
+
+select {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: none;
+
+  &::-ms-expand {
+    display:none;
+  }
+}
+
+textarea {
+  display: inline-block;
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+a,
+button {
+  border: none;
+  border-radius: 0;
+  background: none;
+  appearance: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover, 
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/*.page-enter-active,
+.page-leave-active {transition: all 200ms;}
+.page-enter,
+.page-leave-active {opacity: 0; transform: translateY(15px);}*/
+
+.fade1-enter-active,
+.fade1-leave-active {transition: all 2000ms;}
+.fade1-enter,
+.fade1-leave-active {opacity: 0;}

@@ -24,7 +24,10 @@
       </div>
       <div>
         <h3>Button</h3>
-        <button type="button">Button</button>
+        <div style="display: flex; column-gap: 6px;">
+          <z-btn class="c1">Button</z-btn>
+          <z-btn class="e1">Button</z-btn>
+        </div>
       </div>
       <div>
         <h3>Radio</h3>

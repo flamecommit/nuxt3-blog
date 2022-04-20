@@ -7,13 +7,17 @@
 </template>
 
 <script setup>
+import fs from "fs";
+
 const props = defineProps(['blogListData'])
 
-console.log(props.blogListData);
+const { data, pending, error, refresh } = useAsyncData(
+  'article',
+  () => fs.readdirSync('articles')
+)
+
+console.log(data.value);
 </script>
 
 <style lang="scss">
-.blog-list {
-
-}
 </style>

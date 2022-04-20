@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-const radioModel = ref(1);
+const radioModel = ref(1)
 </script>
 
 
